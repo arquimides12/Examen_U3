@@ -1,0 +1,116 @@
+<!DOCTYPE html>
+<html lang="es">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>ESPENotes PWA</title>
+
+    <!-- Material Design Lite -->
+    <link
+      rel="stylesheet"
+      href="https://code.getmdl.io/1.3.0/material.indigo-pink.min.css"
+    />
+    <script defer src="https://code.getmdl.io/1.3.0/material.min.js"></script>
+
+    <!-- Material Icons -->
+    <link
+      rel="stylesheet"
+      href="https://fonts.googleapis.com/icon?family=Material+Icons"
+    />
+
+    <!-- Estilos personalizados -->
+    <link rel="stylesheet" href="./css/app.css" />
+
+    <!-- Manifest y Service Worker -->
+    <link rel="manifest" href="manifest.json" />
+    <script src="./js/app.js" defer></script>
+  </head>
+
+  <body>
+    <div class="mdl-layout mdl-js-layout mdl-layout--fixed-header">
+      <!-- Header -->
+      <header class="mdl-layout__header">
+        <div class="mdl-layout__header-row">
+          <span class="mdl-layout-title">ESPENotes</span>
+          <div class="mdl-layout-spacer"></div>
+          <nav class="mdl-navigation mdl-layout--large-screen-only">
+            <a class="mdl-navigation__link" href="#">Página Principal</a>
+            <a class="mdl-navigation__link" href="#">Ver Publicaciones</a>
+            <a class="mdl-navigation__link" href="#">Imágenes</a>
+            <a class="mdl-navigation__link" href="#">Videos</a>
+            <a class="mdl-navigation__link" href="#">Audios</a>
+          </nav>
+        </div>
+      </header>
+
+      <!-- Drawer / Menú lateral -->
+      <div class="mdl-layout__drawer">
+        <span class="mdl-layout-title">Menú</span>
+        <nav class="mdl-navigation">
+          <a class="mdl-navigation__link" href="#">
+            <i class="material-icons">home</i> Página Principal
+          </a>
+          <a class="mdl-navigation__link" href="#">
+            <i class="material-icons">article</i> Ver Publicaciones
+          </a>
+          <a class="mdl-navigation__link" href="#">
+            <i class="material-icons">image</i> Imágenes
+          </a>
+          <a class="mdl-navigation__link" href="#">
+            <i class="material-icons">videocam</i> Videos
+          </a>
+          <a class="mdl-navigation__link" href="#">
+            <i class="material-icons">audiotrack</i> Audios
+          </a>
+        </nav>
+      </div>
+
+      <!-- Contenido principal -->
+      <main class="mdl-layout__content">
+        <div class="page-content">
+          <!-- Sección combinada: imagen + card en una fila -->
+          <section class="banner-section split-card mdl-grid">
+            <!-- Columna izquierda: Imagen -->
+            <div class="mdl-cell mdl-cell--8-col card-left">
+              <img src="./src/assets/espe.jpg" alt="ESPE-LATACUNGA" />
+            </div>
+
+            <!-- Columna derecha: Card de misión -->
+            <div class="mdl-cell mdl-cell--4-col card-right expanded">
+              <div class="mdl-card mdl-shadow--4dp">
+                <div
+                  class="mdl-card__title mdl-color--indigo mdl-color-text--white"
+                >
+                  <h2 class="mdl-card__title-text">
+                     Misión: La Forja del Desarrollador PWA
+                  </h2>
+                </div>
+                <div class="mdl-card__supporting-text card-content">
+                  <p>
+                    Un artesano es tan bueno como sus herramientas. Ya
+                    construyeron una PWA manualmente, ahora deben construir la
+                    forja: un entorno optimizado y automatizado para crear
+                    futuras PWAs profesionales y sin errores.
+                  </p>
+                  <h6> Objetivo General</h5>
+                  <p>
+                    Configurar un entorno local para PWAs con live-server,
+                    linting, formateo y scripts de automatización.
+                  </p>
+                   <p>
+                    Descripción de la Misión: De manera individual, 
+                    no construirás una aplicación completa, sino una plantilla de inicio
+                    (boilerplate) reutilizable. Esta plantilla será una carpeta de 
+                    proyecto pre-configurada con todas las herramientas necesarias para
+                    empezar a desarrollar una PWA con Material Design Lite de inmediato.
+                    El entregable principal será el propio entorno, empaquetado y documentado en un repositorio de GitHub.
+                  </p>
+                </div>
+              </div>
+            </div>
+          </section>
+        </div>
+      </main>
+    </div>
+  </body>
+</html>
