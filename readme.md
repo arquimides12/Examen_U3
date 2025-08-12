@@ -69,19 +69,6 @@ El flag -c-1 desactiva el caché del navegador para asegurar que se pruebe siemp
 
 ![Captura de ejecución](img/estru.png)
 
-## Explicacion de la estructura 
-```bash
-espeNotes-boilerplate/
-├── 📁 src/
-│ ├── 📁 assets/ # Imágenes y recursos estáticos
-│ ├── 📁 styles/ # Estilos CSS personalizados
-│ │ └── main.css # Estilos principales del sitio
-│ └── index.html # Página principal de la aplicación
-├── .eslintrc.json # Configuración de ESLint
-├── .prettierrc.json # Configuración de Prettier
-├── package.json # Configuración del proyecto y scripts
-└── README.md # Documentación del proyecto
-``` 
 
 ## Reutilización en Nuevos Proyectos
 
