@@ -2,7 +2,7 @@
 <html lang="es">
   <head>
     <meta charset="UTF-8" />
-    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <meta name="viewport" content="width=device-width, initial-scale=1" />
     <title>ESPENotes PWA</title>
 
     <!-- Material Design Lite -->
@@ -41,12 +41,12 @@
         <div class="mdl-layout__header-row">
           <span class="mdl-layout-title">ESPENotes</span>
           <div class="mdl-layout-spacer"></div>
-          <nav class="mdl-navigation mdl-layout--large-screen-only">
-            <a class="mdl-navigation__link" href="#">Página Principal</a>
-            <a class="mdl-navigation__link" href="#">Ver Publicaciones</a>
-            <a class="mdl-navigation__link" href="#">Imágenes</a>
-            <a class="mdl-navigation__link" href="#">Videos</a>
-            <a class="mdl-navigation__link" href="#">Audios</a>
+          <nav class="mdl-navigation mdl-layout--large-screen-only" id="nav-main">
+            <a href="#" data-section="home" class="mdl-navigation__link">Página Principal</a>
+            <a href="#" data-section="about" class="mdl-navigation__link">Sobre la ESPE</a>
+            <a href="#" data-section="courses" class="mdl-navigation__link">Oferta Académica</a>
+            <a href="#" data-section="admission" class="mdl-navigation__link">Proceso de Admisión</a>
+            <a href="#" data-section="contact" class="mdl-navigation__link">Contacto</a>
           </nav>
         </div>
       </header>
@@ -54,21 +54,21 @@
       <!-- Drawer / Menú lateral -->
       <div class="mdl-layout__drawer">
         <span class="mdl-layout-title">Menú</span>
-        <nav class="mdl-navigation">
-          <a class="mdl-navigation__link" href="#">
+        <nav class="mdl-navigation" id="nav-drawer">
+          <a href="#" data-section="home" class="mdl-navigation__link">
             <i class="material-icons">home</i> Página Principal
           </a>
-          <a class="mdl-navigation__link" href="#">
-            <i class="material-icons">article</i> Ver Publicaciones
+          <a href="#" data-section="about" class="mdl-navigation__link">
+            <i class="material-icons">info</i> Sobre la ESPE
           </a>
-          <a class="mdl-navigation__link" href="#">
-            <i class="material-icons">image</i> Imágenes
+          <a href="#" data-section="courses" class="mdl-navigation__link">
+            <i class="material-icons">school</i> Oferta Académica
           </a>
-          <a class="mdl-navigation__link" href="#">
-            <i class="material-icons">videocam</i> Videos
+          <a href="#" data-section="admission" class="mdl-navigation__link">
+            <i class="material-icons">assignment</i> Proceso de Admisión
           </a>
-          <a class="mdl-navigation__link" href="#">
-            <i class="material-icons">audiotrack</i> Audios
+          <a href="#" data-section="contact" class="mdl-navigation__link">
+            <i class="material-icons">contact_mail</i> Contacto
           </a>
         </nav>
       </div>
@@ -77,12 +77,46 @@
       <main class="mdl-layout__content">
         <div class="page-content">
           <espe-home></espe-home>
-          <espe-about hidden></espe-about>
-          <espe-courses hidden></espe-courses>
-          <espe-admission hidden></espe-admission>
-          <espe-contact hidden></espe-contact>
+          <espe-about></espe-about>
+          <espe-courses></espe-courses>
+          <espe-admission></espe-admission>
+          <espe-contact></espe-contact>
         </div>
       </main>
     </div>
+
+    <!-- Puedes eliminar el script de navegación si no lo vas a usar -->
+     <script>
+  // Mostrar solo la sección seleccionada
+  function showSection(section) {
+    const sections = ['home', 'about', 'courses', 'admission', 'contact'];
+    sections.forEach(sec => {
+      const el = document.querySelector(`espe-${sec}`);
+      if (sec === section) {
+        el.removeAttribute('hidden');
+      } else {
+        el.setAttribute('hidden', '');
+      }
+    });
+  }
+
+  // Configurar la navegación
+  function setupNavigation() {
+    const links = document.querySelectorAll('#nav-main a, #nav-drawer a');
+    links.forEach(link => {
+      link.addEventListener('click', e => {
+        e.preventDefault();
+        const section = link.getAttribute('data-section');
+        showSection(section);
+      });
+    });
+  }
+
+  document.addEventListener('DOMContentLoaded', () => {
+    setupNavigation();
+    showSection('home'); // Mostrar inicio por defecto
+  });
+</script>
+
   </body>
 </html>

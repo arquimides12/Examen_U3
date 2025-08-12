@@ -4,18 +4,35 @@ class EspeCourses extends HTMLElement {
     this.attachShadow({ mode: 'open' });
     this.shadowRoot.innerHTML = `
       <style>
-        h2 { color: #1a4d80; font-family: 'Roboto', sans-serif; }
-        ul { font-family: 'Roboto', sans-serif; }
+        .container {
+          max-width: 800px;
+          margin: 20px auto;
+          padding: 0 16px;
+          font-family: 'Roboto', sans-serif;
+          color: #333;
+        }
+        h2 {
+          color: #1a4d80;
+          margin-bottom: 12px;
+        }
+        ul {
+          font-size: 1.1rem;
+          padding-left: 20px;
+          line-height: 1.5;
+        }
+        li {
+          margin-bottom: 8px;
+        }
       </style>
-      <section>
+      <div class="container">
         <h2>Oferta Académica</h2>
         <ul>
-          <li>Ingeniería en Sistemas - Desarrollo de software y aplicaciones.</li>
-          <li>Ingeniería Electrónica - Sistemas embebidos y telecomunicaciones.</li>
-          <li>Ingeniería Civil - Construcción e infraestructuras.</li>
-          <li>Ingeniería en Mecatrónica - Robótica y automatización.</li>
+          <li><strong>Ingeniería en Sistemas</strong> - Desarrollo de software y aplicaciones.</li>
+          <li><strong>Ingeniería Electrónica</strong> - Sistemas embebidos y telecomunicaciones.</li>
+          <li><strong>Ingeniería Civil</strong> - Construcción e infraestructuras.</li>
+          <li><strong>Ingeniería en Mecatrónica</strong> - Robótica y automatización.</li>
         </ul>
-      </section>
+      </div>
     `;
   }
 }

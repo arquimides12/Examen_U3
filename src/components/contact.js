@@ -4,15 +4,29 @@ class EspeContact extends HTMLElement {
     this.attachShadow({ mode: 'open' });
     this.shadowRoot.innerHTML = `
       <style>
-        h2 { color: #1a4d80; font-family: 'Roboto', sans-serif; }
-        p { font-family: 'Roboto', sans-serif; }
+        .container {
+          max-width: 800px;
+          margin: 20px auto;
+          padding: 0 16px;
+          font-family: 'Roboto', sans-serif;
+          color: #333;
+          line-height: 1.6;
+        }
+        h2 {
+          color: #1a4d80;
+          margin-bottom: 12px;
+        }
+        p {
+          font-size: 1.1rem;
+          margin-bottom: 8px;
+        }
       </style>
-      <section>
+      <div class="container">
         <h2>Contacto</h2>
-        <p>Email: contacto@espe.edu.ec</p>
-        <p>Teléfono: +593 123 456 789</p>
-        <p>Dirección: Latacunga, Ecuador</p>
-      </section>
+        <p><strong>Email:</strong> contacto@espe.edu.ec</p>
+        <p><strong>Teléfono:</strong> +593 123 456 789</p>
+        <p><strong>Dirección:</strong> Latacunga, Ecuador</p>
+      </div>
     `;
   }
 }
