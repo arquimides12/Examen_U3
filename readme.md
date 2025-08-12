@@ -21,7 +21,11 @@ Para instalar y configurar el proyecto en tu máquina local, sigue estos pasos:
 Si aún no has clonado el repositorio, utiliza el siguiente comando para clonarlo:
 
 ```bash
-git https://github.com/arquimides12/espenotes_modules.git 
+git clone https://github.com/arquimides12/Examen_U3.git 
+```
+## Link para celular git page 
+```bash
+Link de page git: https://arquimides12.github.io/Examen_U3/ 
 ```
 En mi caso sucedio esto ya que cree el repositorio despues.
 
@@ -65,7 +69,34 @@ npx http-server ./src -c-1
 ``` 
 El flag -c-1 desactiva el caché del navegador para asegurar que se pruebe siempre la última versión.
 
+## PWA (Progressive Web App)
+- El proyecto incluye manifest.json para configuración de nombre, iconos, tema y modo de presentación.
+
+- Service Worker implementado para cacheo de recursos estáticos y permitir funcionamiento offline básico.
+
+- Uso recomendado bajo HTTPS para funcionalidades completas.
+
 ## Estructrua del Proyecto 
+
+├── src/
+│   ├── components/
+│   │   ├── home.js
+│   │   ├── about.js
+│   │   ├── courses.js
+│   │   ├── admission.js
+│   │   ├── contact.js
+│   │   └── dialog.js
+│   ├── assets/
+│   └── app.js
+├── css/
+│   └── app.css
+├── js/
+│   └── app.js
+├── manifest.json
+├── service-worker.js
+├── index.html
+├── package.json
+└── README.md 
 
 ![Captura de ejecución](img/estru.png)
 
@@ -106,15 +137,28 @@ MIT - Puedes usar libremente este código para fines personales, académicos o c
 
 # Ejecucion 
 
-![Captura de ejecución](img/eje1.png)
+![Captura de ejecución](img/ejem.png)
 
 Segunda captura de ejecución 
 
 ![Captura de ejecución](img/eje2.png)
 
-Responsivo con @media query 
+tercera captura de ejecución 
 
-![Captura de ejecución](img/respo.png)
+![Captura de ejecución](img/eje3.png)
+
+cuarta captura de ejecución 
+
+![Captura de ejecución](img/eje4.png)
+
+quinta captura de ejecución 
+
+![Captura de ejecución](img/eje5.png)
+
+sexta captura de ejecución 
+
+![Captura de ejecución](img/eje6.png)
+
 
 
 

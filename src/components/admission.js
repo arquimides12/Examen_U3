@@ -5,31 +5,49 @@ class EspeAdmission extends HTMLElement {
     this.shadowRoot.innerHTML = `
       <style>
         .container {
-          max-width: 800px;
-          margin: 20px auto;
-          padding: 0 16px;
+          max-width: 700px;
+          margin: 40px auto;
+          padding: 30px 25px;
           font-family: 'Roboto', sans-serif;
-          color: #333;
-          line-height: 1.6;
+          background-color: #f0f4fb;
+          border-radius: 14px;
+          box-shadow: 0 6px 18px rgba(26, 77, 128, 0.15);
+          color: #1a4d80;
         }
         h2 {
-          color: #1a4d80;
-          margin-bottom: 12px;
+          font-weight: 800;
+          font-size: 2.4rem;
+          margin-bottom: 30px;
+          letter-spacing: 1.2px;
+          text-align: center;
+          text-shadow: 1px 1px 2px rgba(0,0,0,0.1);
         }
-        p {
-          font-size: 1.1rem;
-          margin-bottom: 12px;
+        ol {
+          font-size: 1.15rem;
+          color: #34495e;
+          padding-left: 20px;
+          line-height: 1.8;
+        }
+        ol li {
+          margin-bottom: 18px;
+          font-weight: 500;
+          border-left: 4px solid #1a4d80;
+          padding-left: 12px;
+          transition: color 0.3s ease;
+          cursor: default;
+        }
+        ol li:hover {
+          color: #14416a;
         }
       </style>
       <div class="container">
         <h2>Proceso de Admisión</h2>
-        <p>Para ingresar a la Universidad de las Fuerzas Armadas ESPE, debes seguir estos pasos generales:</p>
-        <ul>
+        <ol>
           <li>Revisión de requisitos académicos y documentación.</li>
           <li>Presentación del examen de admisión.</li>
           <li>Entrevista personal (si aplica).</li>
           <li>Publicación de resultados y matrícula.</li>
-        </ul>
+        </ol>
       </div>
     `;
   }
