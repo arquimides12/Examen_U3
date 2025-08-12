@@ -76,28 +76,6 @@ El flag -c-1 desactiva el caché del navegador para asegurar que se pruebe siemp
 
 - Uso recomendado bajo HTTPS para funcionalidades completas.
 
-## Estructrua del Proyecto 
-
-├── src/
-│   ├── components/
-│   │   ├── home.js
-│   │   ├── about.js
-│   │   ├── courses.js
-│   │   ├── admission.js
-│   │   ├── contact.js
-│   │   └── dialog.js
-│   ├── assets/
-│   └── app.js
-├── css/
-│   └── app.css
-├── js/
-│   └── app.js
-├── manifest.json
-├── service-worker.js
-├── index.html
-├── package.json
-└── README.md 
-
 ![Captura de ejecución](img/estru.png)
 
 
