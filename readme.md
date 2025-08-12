@@ -1,4 +1,4 @@
-# **Plantilla Base para Progresive Web Apps (PWA) – ESPE**
+# **Plantilla Base para Progresive Web Apps EXAMEN (PWA) – ESPE**
 
 Este repositorio proporciona una **estructura base optimizada** para el desarrollo de aplicaciones web progresivas (PWA), ideal para proyectos personales, académicos o profesionales. Incluye servidor de desarrollo con recarga automática, herramientas de calidad de código y configuración básica de service worker y manifest.
 
